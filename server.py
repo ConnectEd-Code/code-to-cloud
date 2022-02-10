@@ -1,14 +1,14 @@
 from flask import Flask, request, render_template
 
-app = Flask(__name__)
+invite_app = Flask(__name__)
 
 
-@app.route("/")
+@invite_app.route("/")
 def form():
     return render_template("form.html")
 
 
-@app.route("/view")
+@invite_app.route("/view")
 def view_invite():
     # to = "Tom"
     # event = "Artemis' birthday party"
@@ -37,4 +37,4 @@ def view_invite():
 
 if __name__ == '__main__':
     # app.run(debug=True, use_reloader=True, host='0.0.0.0', port=8000)
-    app.run(debug=True, use_reloader=True)
+    invite_app.run(debug=True, use_reloader=True)
